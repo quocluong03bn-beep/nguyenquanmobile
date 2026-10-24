@@ -9,7 +9,7 @@ products:
     old_price: 12490000
     title: iPhone 17 Pro Max
     condition: Đẹp 99% · còn bảo hành dài
-    image: https://www.facebook.com/photo/?fbid=3563800540456038&set=a.126283804207746&__cft__[0]=AZhZ4xFxmDaRDvkt7ZLwuiN8RzIGTb0LUVrgQV3GprIzKRO1xFmSX9QDHtHkSrYgMEaOmmIpFsgP8dLVT1IYvbh9wPrLxg2bIW6AdEsLlAgypfq0GqyJTpEo4mphTwfmMtT4QCDsSlzvLnWcxU8OXYrCEMUxCibiVVuLfc8pspQOI7-g9HnQAu_bw_w&__tn__=EH-R
+    image: /images/ao-thun-nu-tay-ngan-mau-kem-in-hinh-asm18-18.webp
     storage: 256GB
     description: Ngoại hình đẹp, kiểm tra chức năng kỹ. Màu và dung lượng tùy tình
       trạng hàng.
