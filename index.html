@@ -24,21 +24,65 @@
     @media(max-width:700px){html{scroll-padding-top:70px}.container{width:min(calc(100% - 32px),520px)}.section{padding:66px 0}.topbar-inner{min-height:33px;justify-content:center}.topbar-note{font-size:9px}.topbar-inner>a{display:none}.nav{height:66px}.brand-mark{width:38px;height:38px}.brand-name{font-size:13px}.menu-toggle{display:grid}.nav-cta{display:none}.nav-links{position:absolute;top:66px;left:0;right:0;display:none;padding:8px 20px 16px;border-top:1px solid rgba(255,255,255,.08);background:#071426}.nav-links.open{display:grid;gap:0}.nav-links a{padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.nav-links a:last-child{border:0}.hero{padding:49px 0 33px}.hero-grid{grid-template-columns:1fr;gap:0}.hero h1{margin-top:17px;font-size:clamp(42px,11.5vw,60px)}.hero-copy{font-size:14px}.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:21px}.btn{min-height:48px;padding-inline:10px;font-size:10px}.hero-points{gap:10px 14px;margin-top:18px;font-size:9px}.hero-visual{min-height:300px;margin-top:-4px;transform:scale(.82);transform-origin:center}.hero-robot{width:min(112%,410px)}.hero-float.one{top:12px;right:-6px}.hero-float.two{bottom:16px;left:-8px}.hero-float{gap:7px;padding:8px 9px}.hero-float .float-icon{width:30px;height:30px}.hero-float strong{font-size:9px}.hero-float small{font-size:8px}.stats-grid{grid-template-columns:1fr 1fr}.stat{min-height:72px;padding:10px 6px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);gap:8px}.stat:nth-child(2){border-right:0}.stat:nth-child(3),.stat:nth-child(4){border-bottom:0}.stat-icon{width:33px;height:33px;border-radius:10px}.stat-icon svg{width:16px;height:16px}.stat strong{font-size:10px}.stat small{font-size:8px}.section-head{display:block;margin-bottom:25px}.section-title{font-size:33px}.section-copy{font-size:13px}.section-head .text-link{margin-top:15px}.product-grid{grid-template-columns:1fr;gap:12px}.product-card{display:grid;grid-template-columns:37% 63%}.product-art{height:100%;min-height:236px}.phone-art{width:66px;height:130px}.phone-art:nth-child(2){margin-left:32px}.product-tag{top:9px;left:7px;padding:6px 7px;font-size:7px}.product-body{min-width:0;padding:14px 12px}.product-meta{font-size:7px}.product-body h3{font-size:14px;line-height:1.3}.product-desc{min-height:0;font-size:9px}.price{font-size:17px}.old-price{font-size:9px}.gift-line{font-size:8px}.product-action{min-height:39px;margin-top:10px;font-size:9px}.service-grid{grid-template-columns:1fr;gap:12px;margin-top:25px}.service-card{padding:19px 16px;border-radius:18px}.service-top{gap:11px;margin-bottom:17px}.service-icon{width:43px;height:43px}.service-card h3{font-size:17px}.service-list{gap:10px 7px}.service-list li{font-size:10px}.service-price{padding:10px 9px}.service-price span{font-size:8px}.service-price strong{font-size:12px}.service-price-note,.service-note{font-size:9px}.trust-grid{grid-template-columns:1fr 1fr;gap:9px;margin-top:25px}.trust-item{min-height:155px;padding:15px 12px}.trust-item h3{font-size:12px}.trust-item p{font-size:9px}.feedback-grid{grid-template-columns:1fr;gap:10px}.feedback-card{padding:16px}.gallery-grid{grid-template-columns:1fr;gap:10px;margin-top:20px}.gallery-card{min-height:205px}.booking-grid{grid-template-columns:1fr;gap:26px}.form-card{padding:20px 16px}.form-grid{grid-template-columns:1fr;gap:12px}.field.full{grid-column:auto}.contact-grid{grid-template-columns:1fr;gap:22px}.map-card,.map-card iframe{min-height:230px}.map-empty{height:230px}.footer{padding-bottom:25px}.footer-inner{align-items:flex-start;flex-direction:column;gap:8px}.floating-bar{right:10px;bottom:calc(12px + env(safe-area-inset-bottom));gap:7px;padding:6px}.float-btn{width:42px;height:42px;min-height:42px}.floating-label{font-size:9px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
   </style>
+  <style>
+    /* Keep the decorative rings behind the service heading and copy. */
+    .services:after{z-index:0;pointer-events:none}
+    .services>.container{position:relative;z-index:1}
+    .section-title{max-width:100%;white-space:normal;overflow-wrap:break-word;text-wrap:balance}
+    @media(max-width:700px){.services .section-title{max-width:18ch;font-size:clamp(30px,7vw,34px)}}
+    .product-image-trigger{position:relative;z-index:1;width:100%;height:100%;min-height:inherit;display:grid;place-items:center;padding:10px;border:0;background:transparent;cursor:zoom-in}
+    .product-image-trigger img{width:100%;height:100%;object-fit:contain;padding:8px}
+    .product-image-trigger:focus-visible{outline:3px solid var(--cyan-dark);outline-offset:-4px}
+    .product-image-trigger .zoom-hint{position:absolute;right:10px;bottom:10px;padding:6px 8px;border-radius:8px;color:#fff;background:rgba(7,20,38,.78);font-size:9px;font-weight:800}
+    .product-art>img{object-fit:contain!important;padding:12px}
+    .product-ask{margin:13px 0 0;color:#52677c;font-size:10px;font-weight:800}
+    .product-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+    .product-actions .btn{width:100%;min-height:40px;margin:0;padding:0 8px;font-size:10px}
+    .btn-zalo{color:#fff;background:#1179d5}
+    .btn-messenger{color:#fff;background:#0866ff}
+    .lightbox[hidden]{display:none!important}
+    .lightbox-arrow[hidden],.lightbox-thumbs[hidden]{display:none!important}
+    .lightbox{position:fixed;z-index:100;inset:0;display:grid;place-items:center;padding:18px;background:rgba(3,10,19,.91);backdrop-filter:blur(8px)}
+    .lightbox-panel{position:relative;width:min(980px,100%);max-height:min(94vh,900px);display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:20px;color:#fff;background:#0b1b2c;box-shadow:0 24px 80px rgba(0,0,0,.48)}
+    .lightbox-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .lightbox-title{margin:0;font-size:14px;font-weight:850}
+    .lightbox-count{margin-left:auto;color:#9eb0c1;font-size:11px}
+    .lightbox-close,.lightbox-arrow{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.17);border-radius:50%;color:#fff;background:rgba(255,255,255,.08);cursor:pointer}
+    .lightbox-close{font-size:24px;line-height:1}
+    .lightbox-stage{position:relative;min-height:250px;display:grid;place-items:center;padding:18px 64px}
+    .lightbox-stage img{display:block;max-width:100%;max-height:68vh;object-fit:contain}
+    .lightbox-arrow{position:absolute;top:50%;transform:translateY(-50%);font-size:23px}
+    .lightbox-prev{left:14px}.lightbox-next{right:14px}
+    .lightbox-thumbs{display:flex;gap:8px;overflow-x:auto;padding:12px 15px;border-top:1px solid rgba(255,255,255,.1)}
+    .lightbox-thumb{width:70px;height:58px;flex:0 0 auto;overflow:hidden;padding:0;border:1px solid rgba(255,255,255,.22);border-radius:8px;background:#13283e;cursor:pointer}
+    .lightbox-thumb[aria-current="true"]{border:2px solid var(--cyan)}
+    .lightbox-thumb img{width:100%;height:100%;object-fit:cover}
+    @media(max-width:700px){.product-actions{gap:6px}.product-actions .btn{font-size:9px}.lightbox{padding:8px}.lightbox-panel{max-height:94vh;border-radius:14px}.lightbox-head{padding:10px 11px}.lightbox-stage{min-height:220px;padding:14px 46px}.lightbox-stage img{max-height:64vh}.lightbox-arrow{width:34px;height:34px}.lightbox-prev{left:7px}.lightbox-next{right:7px}.lightbox-thumbs{padding:9px}.lightbox-thumb{width:58px;height:50px}}
+    @media(max-width:390px){.product-actions{grid-template-columns:1fr}.product-actions .btn{min-height:35px}}
+    .float-btn.zalo{color:#0866c6;background:#fff}.btn-zalo{color:#0866c6;background:#fff;border:1px solid #d9e8f6}
+    .zalo-logo{display:block;width:30px;height:30px;object-fit:contain}.btn-zalo .zalo-logo{width:25px;height:25px}
+    .bot-trap{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+  </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <div id="app"><div class="loading">Đang tải nội dung cửa hàng…</div></div>
-  <!-- Netlify nhận diện form tĩnh này khi deploy; form đang hiển thị được dựng từ dữ liệu CMS. -->
-  <form name="tu-van" data-netlify="true" netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="tu-van" />
-    <input name="ho-ten" /><input name="so-dien-thoai" /><input name="nhu-cau" /><input name="model" /><textarea name="ghi-chu"></textarea><input name="bot-field" />
-  </form>
+  <div class="lightbox" id="image-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Thư viện ảnh sản phẩm" hidden>
+    <div class="lightbox-panel">
+      <div class="lightbox-head"><h2 class="lightbox-title" id="lightbox-title"></h2><span class="lightbox-count" id="lightbox-count"></span><button class="lightbox-close" id="lightbox-close" type="button" aria-label="Đóng thư viện ảnh">×</button></div>
+      <div class="lightbox-stage"><button class="lightbox-arrow lightbox-prev" id="lightbox-prev" type="button" aria-label="Ảnh trước">‹</button><img id="lightbox-image" alt=""><button class="lightbox-arrow lightbox-next" id="lightbox-next" type="button" aria-label="Ảnh tiếp theo">›</button></div>
+      <div class="lightbox-thumbs" id="lightbox-thumbs" aria-label="Chọn ảnh sản phẩm"></div>
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     const CONTENT_FILES = {
       home: 'content/home.md', products: 'content/products.md', services: 'content/services.md',
       trust: 'content/trust.md', feedback: 'content/feedback.md', contact: 'content/contact.md'
     };
+    let productGalleries = [];
+    const ZALO_LOGO_URL = 'https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg';
+    const zaloLogo = () => `<img class="zalo-logo" src="${ZALO_LOGO_URL}" alt="" aria-hidden="true">`;
     const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
     const safeUrl = value => {
       const url = String(value || '').trim();
@@ -89,13 +133,68 @@
       if (!match) throw new Error(`File ${path} thiếu YAML front matter`);
       return window.jsyaml.load(match[1]) || {};
     }
-    function renderProduct(item) {
+    function renderProduct(item, zaloHref, messengerHref, contact) {
       const price = money(item.price);
       const oldPrice = money(item.old_price);
-      const art = item.image
-        ? `<img src="${esc(item.image)}" alt="${esc(item.image_alt || item.title)}" loading="lazy">`
+      const images = [item.image, ...(Array.isArray(item.gallery) ? item.gallery : [])].filter(Boolean);
+      const galleryId = images.length ? productGalleries.push({ title: item.title, images, alt: item.image_alt || item.title }) - 1 : -1;
+      const art = images.length
+        ? `<button class="product-image-trigger" type="button" data-gallery-id="${galleryId}" aria-label="Xem ${esc(item.title)} và các ảnh khác"><img src="${esc(images[0])}" alt="${esc(item.image_alt || item.title)}" loading="lazy"><span class="zoom-hint">Xem ${images.length} ảnh</span></button>`
         : `<div class="phone-art"><div class="phone-screen-art"></div></div><div class="phone-art"><div class="phone-screen-art"></div></div>`;
-      return `<article class="product-card"><div class="product-art">${art}<span class="product-tag">${esc(item.condition || 'Đã kiểm tra')}</span></div><div class="product-body"><div class="product-meta"><span>${esc(item.brand || 'Điện thoại')}</span><span>${esc(item.storage || '')}</span></div><h3>${esc(item.title)}</h3><p class="product-desc">${esc(item.description || '')}</p><div class="price-row"><span class="price">${price ? `Từ ${price}` : esc(item.price_label || 'Liên hệ báo giá')}</span>${oldPrice ? `<span class="old-price">${oldPrice}</span>` : ''}</div>${item.gift ? `<div class="gift-line">${icon('bag')}<span>${esc(item.gift)}</span></div>` : ''}<a class="btn btn-dark product-action" href="#dat-lich" data-product="${esc(item.title)}">${esc(item.button_label || 'Hỏi tình trạng & giá')} ${icon('arrow')}</a></div></article>`;
+      return `<article class="product-card"><div class="product-art">${art}<span class="product-tag">${esc(item.condition || 'Đã kiểm tra')}</span></div><div class="product-body"><div class="product-meta"><span>${esc(item.brand || 'Điện thoại')}</span><span>${esc(item.storage || '')}</span></div><h3>${esc(item.title)}</h3><p class="product-desc">${esc(item.description || '')}</p><div class="price-row"><span class="price">${price ? `Từ ${price}` : esc(item.price_label || 'Liên hệ báo giá')}</span>${oldPrice ? `<span class="old-price">${oldPrice}</span>` : ''}</div>${item.gift ? `<div class="gift-line">${icon('bag')}<span>${esc(item.gift)}</span></div>` : ''}<p class="product-ask">${esc(item.button_label || 'Hỏi tình trạng & giá máy qua:')}</p><div class="product-actions"><a class="btn btn-zalo" href="${zaloHref}" target="_blank" rel="noopener noreferrer">${zaloLogo()}${esc(contact.zalo_label || 'Zalo')}</a><a class="btn btn-messenger" href="${messengerHref}" target="_blank" rel="noopener noreferrer">${icon('bubble')}${esc(contact.messenger_label || 'Messenger')}</a></div></div></article>`;
+    }
+    function bindProductGalleries() {
+      const modal = document.getElementById('image-lightbox');
+      const image = document.getElementById('lightbox-image');
+      const title = document.getElementById('lightbox-title');
+      const count = document.getElementById('lightbox-count');
+      const thumbs = document.getElementById('lightbox-thumbs');
+      const closeButton = document.getElementById('lightbox-close');
+      const previousButton = document.getElementById('lightbox-prev');
+      const nextButton = document.getElementById('lightbox-next');
+      let activeGallery = null, activeIndex = 0, returnFocus = null;
+      const showImage = index => {
+        if (!activeGallery) return;
+        activeIndex = (index + activeGallery.images.length) % activeGallery.images.length;
+        image.src = activeGallery.images[activeIndex];
+        image.alt = `${activeGallery.alt} — ảnh ${activeIndex + 1}`;
+        title.textContent = activeGallery.title;
+        count.textContent = `${activeIndex + 1} / ${activeGallery.images.length}`;
+        thumbs.querySelectorAll('.lightbox-thumb').forEach((button, i) => button.setAttribute('aria-current', String(i === activeIndex)));
+        thumbs.querySelector('.lightbox-thumb[aria-current="true"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        previousButton.hidden = activeGallery.images.length < 2;
+        nextButton.hidden = activeGallery.images.length < 2;
+        thumbs.hidden = activeGallery.images.length < 2;
+      };
+      const close = () => {
+        modal.hidden = true;
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        activeGallery = null;
+        returnFocus?.focus();
+      };
+      document.querySelectorAll('[data-gallery-id]').forEach(button => button.addEventListener('click', () => {
+        activeGallery = productGalleries[Number(button.dataset.galleryId)];
+        if (!activeGallery?.images.length) return;
+        returnFocus = button;
+        thumbs.innerHTML = activeGallery.images.map((src, index) => `<button class="lightbox-thumb" type="button" aria-label="Mở ảnh ${index + 1}" aria-current="false" data-thumb-index="${index}"><img src="${esc(src)}" alt="" loading="lazy"></button>`).join('');
+        thumbs.querySelectorAll('[data-thumb-index]').forEach(thumb => thumb.addEventListener('click', () => showImage(Number(thumb.dataset.thumbIndex))));
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        showImage(0);
+        closeButton.focus();
+      }));
+      closeButton.addEventListener('click', close);
+      previousButton.addEventListener('click', () => showImage(activeIndex - 1));
+      nextButton.addEventListener('click', () => showImage(activeIndex + 1));
+      modal.addEventListener('click', event => { if (event.target === modal) close(); });
+      document.addEventListener('keydown', event => {
+        if (modal.hidden) return;
+        if (event.key === 'Escape') close();
+        if (event.key === 'ArrowLeft') showImage(activeIndex - 1);
+        if (event.key === 'ArrowRight') showImage(activeIndex + 1);
+      });
     }
     function renderServiceGroup(group, style = '') {
       const rows = (group.items || []).map(item => `<li>${icon('check')}<span>${esc(item.name)}${item.description ? `<small class="service-item-note">${esc(item.description)}</small>` : ''}</span></li>`).join('');
@@ -112,6 +211,7 @@
     }
     function renderSite(data) {
       const h = data.home, products = data.products.products || [], services = data.services, trust = data.trust, feedback = data.feedback, contact = data.contact;
+      productGalleries = [];
       document.title = `${h.store_name} | ${h.page_title}`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription && h.page_description) metaDescription.content = h.page_description;
@@ -133,17 +233,44 @@
         <main>
           <section class="hero" id="trang-chu"><div class="container hero-grid"><div><div class="hero-chip">${esc(h.hero.eyebrow)}</div><h1>${esc(h.hero.heading)}<br><em>${esc(h.hero.highlight)}</em></h1><p class="hero-copy">${esc(h.hero.description)}</p><div class="hero-actions"><a class="btn btn-primary" href="${safeUrl(h.hero.primary_url)}">${esc(h.hero.primary_label)} ${icon('arrow')}</a><a class="btn btn-outline" href="${safeUrl(h.hero.secondary_url)}">${icon('tool')} ${esc(h.hero.secondary_label)}</a></div><div class="hero-points">${(h.hero.points || []).map(point => `<span>${icon('check')}${esc(point)}</span>`).join('')}</div></div><div class="hero-visual"><div class="hero-orbit"></div><div class="hero-glow"></div>${renderRobotOrImage(h)}<div class="hero-float one"><span class="float-icon">${icon('star')}</span><span><strong>${esc(h.hero.float_one_title)}</strong><small>${esc(h.hero.float_one_text)}</small></span></div><div class="hero-float two"><span class="float-icon lime">${icon('tool')}</span><span><strong>${esc(h.hero.float_two_title)}</strong><small>${esc(h.hero.float_two_text)}</small></span></div></div></div></section>
           <section class="quick-stats" aria-label="${esc(h.stats_aria)}"><div class="container stats-grid">${stats}</div></section>
-          <section class="section products" id="dien-thoai"><div class="container"><div class="section-head"><div><p class="section-kicker">${esc(h.products_heading.eyebrow)}</p><h2 class="section-title">${esc(h.products_heading.title)}</h2><p class="section-copy">${esc(h.products_heading.description)}</p></div><a class="text-link" href="#dat-lich">${esc(h.products_heading.link_label)} ${icon('arrow')}</a></div><div class="product-grid">${products.map(renderProduct).join('')}</div><p class="service-price-note">${esc(h.products_heading.note)}</p></div></section>
+          <section class="section products" id="dien-thoai"><div class="container"><div class="section-head"><div><p class="section-kicker">${esc(h.products_heading.eyebrow)}</p><h2 class="section-title">${esc(h.products_heading.title)}</h2><p class="section-copy">${esc(h.products_heading.description)}</p></div><a class="text-link" href="#dat-lich">${esc(h.products_heading.link_label)} ${icon('arrow')}</a></div><div class="product-grid">${products.map(item => renderProduct(item, zaloHref, messengerHref, contact)).join('')}</div><p class="service-price-note">${esc(h.products_heading.note)}</p></div></section>
           <section class="section services" id="sua-chua"><div class="container"><p class="section-kicker">${esc(h.services_heading.eyebrow)}</p><h2 class="section-title">${esc(h.services_heading.title)}</h2><p class="section-copy">${esc(h.services_heading.description)}</p><div class="service-grid">${renderServiceGroup(services.hardware, '')}${renderServiceGroup(services.software, 'cyan')}</div></div></section>
+          <section class="section booking" id="dat-lich"><div class="container booking-grid"><div><p class="section-kicker">${esc(h.booking.eyebrow)}</p><h2 class="section-title">${esc(h.booking.title)}</h2><p class="section-copy">${esc(h.booking.description)}</p><div class="booking-benefits">${(h.booking.benefits || []).map(text => `<div class="booking-benefit"><span>${icon('check')}</span>${esc(text)}</div>`).join('')}</div></div><form class="form-card" id="repair-booking-form"><input class="bot-trap" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true"><h3>${esc(h.booking.form_title)}</h3><p>${esc(h.booking.form_description)}</p><div class="form-grid"><div class="field full"><label for="need">${esc(h.booking.need_label)}</label><select id="need" name="need" required>${(h.booking.needs || []).map(item => `<option value="${esc(item)}">${esc(item)}</option>`).join('')}</select></div><div class="field"><label for="customer-name">${esc(h.booking.name_label)}</label><input id="customer-name" name="name" type="text" maxlength="120" placeholder="${esc(h.booking.name_placeholder)}" autocomplete="name" required></div><div class="field"><label for="customer-phone">${esc(h.booking.phone_label)}</label><input id="customer-phone" name="phone" type="tel" maxlength="30" placeholder="${esc(h.booking.phone_placeholder)}" autocomplete="tel" inputmode="tel" required></div><div class="field full"><label for="customer-model">${esc(h.booking.model_label)}</label><input id="customer-model" name="device" type="text" maxlength="120" placeholder="${esc(h.booking.model_placeholder)}" required></div><div class="field full"><label for="customer-note">${esc(h.booking.note_label)}</label><textarea id="customer-note" name="issue" maxlength="1500" placeholder="${esc(h.booking.note_placeholder)}" required></textarea></div></div><button class="btn btn-primary form-submit" type="submit">${esc(h.booking.submit_label)} ${icon('arrow')}</button><p class="form-privacy">${esc(h.booking.privacy_note)}</p></form></div></section>
           <section class="section trust" id="cam-ket"><div class="container"><p class="section-kicker">${esc(trust.eyebrow)}</p><h2 class="section-title">${esc(trust.title)}</h2><p class="section-copy">${esc(trust.description)}</p><div class="trust-grid">${commitments}</div></div></section>
           <section class="section proof" id="feedback"><div class="container"><p class="section-kicker">${esc(feedback.eyebrow)}</p><h2 class="section-title">${esc(feedback.title)}</h2><p class="section-copy">${esc(feedback.description)}</p><div class="feedback-grid">${feedbackContent}</div><div class="gallery-grid">${galleryContent}</div></div></section>
-          <section class="section booking" id="dat-lich"><div class="container booking-grid"><div><p class="section-kicker">${esc(h.booking.eyebrow)}</p><h2 class="section-title">${esc(h.booking.title)}</h2><p class="section-copy">${esc(h.booking.description)}</p><div class="booking-benefits">${(h.booking.benefits || []).map(text => `<div class="booking-benefit"><span>${icon('check')}</span>${esc(text)}</div>`).join('')}</div></div><form class="form-card" name="tu-van" method="POST" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="tu-van"><p class="hidden"><label>Không điền ô này<input name="bot-field"></label></p><h3>${esc(h.booking.form_title)}</h3><p>${esc(h.booking.form_description)}</p><div class="form-grid"><div class="field full"><label for="need">${esc(h.booking.need_label)}</label><select id="need" name="nhu-cau" required>${(h.booking.needs || []).map(item => `<option value="${esc(item)}">${esc(item)}</option>`).join('')}</select></div><div class="field"><label for="customer-name">${esc(h.booking.name_label)}</label><input id="customer-name" name="ho-ten" type="text" placeholder="${esc(h.booking.name_placeholder)}" autocomplete="name" required></div><div class="field"><label for="customer-phone">${esc(h.booking.phone_label)}</label><input id="customer-phone" name="so-dien-thoai" type="tel" placeholder="${esc(h.booking.phone_placeholder)}" autocomplete="tel" inputmode="tel" required></div><div class="field full"><label for="customer-model">${esc(h.booking.model_label)}</label><input id="customer-model" name="model" type="text" placeholder="${esc(h.booking.model_placeholder)}"></div><div class="field full"><label for="customer-note">${esc(h.booking.note_label)}</label><textarea id="customer-note" name="ghi-chu" placeholder="${esc(h.booking.note_placeholder)}"></textarea></div></div><button class="btn btn-primary form-submit" type="submit">${esc(h.booking.submit_label)} ${icon('arrow')}</button><p class="form-privacy">${esc(h.booking.privacy_note)}</p></form></div></section>
           <section class="section contact" id="lien-he"><div class="container contact-grid"><div><p class="section-kicker">${esc(contact.eyebrow)}</p><h2 class="section-title">${esc(contact.title)}</h2><p class="section-copy">${esc(contact.description)}</p><div class="contact-list"><div class="contact-row"><span class="contact-icon">${icon('pin')}</span><span><strong>${esc(contact.address_label)}</strong>${esc(contact.address)}</span></div><div class="contact-row"><span class="contact-icon">${icon('phone')}</span><span><strong>${esc(contact.phone_label)}</strong><a href="tel:${esc(phoneDigits)}">${esc(contact.phone)}</a></span></div><div class="contact-row"><span class="contact-icon">${icon('clock')}</span><span><strong>${esc(contact.hours_label)}</strong>${esc(contact.opening_hours)}</span></div></div></div><div class="map-card">${contact.address ? `<iframe title="${esc(contact.map_title)}" src="${mapSrc}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>` : `<div class="map-empty">${esc(contact.map_empty_message)}</div>`}</div></div></section>
         </main>
         <footer class="footer"><div class="container footer-inner"><span>© ${new Date().getFullYear()} ${esc(h.store_name)} · ${esc(h.footer_note)}</span><a href="#trang-chu">${esc(h.back_to_top)} ↑</a></div></footer>
-        <div class="floating-bar" role="group" aria-label="${esc(contact.quick_contact_aria)}"><span class="floating-label">${esc(contact.quick_contact_label)}</span><a class="float-btn" href="tel:${esc(phoneDigits)}" aria-label="${esc(contact.call_label)}" title="${esc(contact.call_label)}">${icon('phone')}</a><a class="float-btn zalo" href="${zaloHref}" target="_blank" rel="noopener noreferrer" aria-label="${esc(contact.zalo_label)}" title="${esc(contact.zalo_label)}">${icon('bubble')}</a><a class="float-btn messenger" href="${messengerHref}" target="_blank" rel="noopener noreferrer" aria-label="${esc(contact.messenger_label)}" title="${esc(contact.messenger_label)}">${icon('bubble')}</a></div>`;
+        <div class="floating-bar" role="group" aria-label="${esc(contact.quick_contact_aria)}"><span class="floating-label">${esc(contact.quick_contact_label)}</span><a class="float-btn" href="tel:${esc(phoneDigits)}" aria-label="${esc(contact.call_label)}" title="${esc(contact.call_label)}">${icon('phone')}</a><a class="float-btn zalo" href="${zaloHref}" target="_blank" rel="noopener noreferrer" aria-label="${esc(contact.zalo_label)}" title="${esc(contact.zalo_label)}">${zaloLogo()}</a><a class="float-btn messenger" href="${messengerHref}" target="_blank" rel="noopener noreferrer" aria-label="${esc(contact.messenger_label)}" title="${esc(contact.messenger_label)}">${icon('bubble')}</a></div>`;
+      bindProductGalleries();
       const needSelect = document.getElementById('need');
       needSelect.insertAdjacentHTML('afterbegin', `<option value="" disabled selected>${esc(h.booking.need_placeholder)}</option>`);
+      const bookingForm = document.getElementById('repair-booking-form');
+      bookingForm.addEventListener('submit', async event => {
+        event.preventDefault();
+        const submit = bookingForm.querySelector('[type="submit"]');
+        const originalButton = submit.innerHTML;
+        submit.disabled = true;
+        submit.textContent = h.booking.sending_label || 'Đang gửi...';
+        try {
+          const values = Object.fromEntries(new FormData(bookingForm).entries());
+          const response = await fetch('/.netlify/functions/telegram-booking', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(values)
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok || !result.success) throw new Error(result.message || 'Gửi lịch hẹn thất bại');
+          bookingForm.reset();
+          alert(h.booking.success_message || 'Đã gửi yêu cầu thành công.');
+        } catch (error) {
+          console.error('Không gửi được lịch hẹn:', error);
+          alert(h.booking.failure_message || 'Chưa gửi được yêu cầu. Vui lòng thử lại hoặc gọi cửa hàng.');
+        } finally {
+          submit.disabled = false;
+          submit.innerHTML = originalButton;
+        }
+      });
       const toggle = document.getElementById('menu-toggle');
       const menu = document.getElementById('main-nav');
       toggle.addEventListener('click', () => { const open = menu.classList.toggle('open'); toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Đóng menu' : 'Mở menu'); });
