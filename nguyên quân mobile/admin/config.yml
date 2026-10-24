@@ -1,0 +1,270 @@
+# Đăng nội dung bằng Netlify Identity + Git Gateway; cần deploy repository lên Netlify.
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+locale: "vi"
+show_preview_links: true
+
+collections:
+  - name: "site"
+    label: "Trang chủ & banner"
+    format: "frontmatter"
+    files:
+      - name: "home"
+        label: "Nội dung trang chủ"
+        file: "content/home.md"
+        fields:
+          - { label: "Tên cửa hàng", name: "store_name", widget: "string" }
+          - { label: "Tiêu đề trang (SEO)", name: "page_title", widget: "string" }
+          - { label: "Mô tả trang (SEO)", name: "page_description", widget: "text" }
+          - { label: "Dòng thương hiệu nhỏ", name: "brand_subtitle", widget: "string" }
+          - { label: "Ký hiệu logo", name: "logo_mark", widget: "string", required: false }
+          - { label: "Thông báo trên đầu trang", name: "top_notice", widget: "string" }
+          - { label: "Nhãn điều hướng", name: "nav_aria", widget: "string", default: "Điều hướng chính" }
+          - label: "Menu điều hướng"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - { label: "Tên mục", name: "label", widget: "string" }
+              - { label: "Đường dẫn", name: "url", widget: "string", hint: "Ví dụ: #dien-thoai hoặc https://..." }
+          - { label: "Nút trên thanh menu", name: "header_cta_label", widget: "string" }
+          - { label: "Đường dẫn nút menu", name: "header_cta_url", widget: "string" }
+          - label: "Banner chính"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề dòng 1", name: "heading", widget: "string" }
+              - { label: "Tiêu đề dòng 2 (màu nổi bật)", name: "highlight", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - { label: "Nút chính", name: "primary_label", widget: "string" }
+              - { label: "Liên kết nút chính", name: "primary_url", widget: "string" }
+              - { label: "Nút dịch vụ", name: "secondary_label", widget: "string" }
+              - { label: "Liên kết nút dịch vụ", name: "secondary_url", widget: "string" }
+              - label: "Điểm nổi bật"
+                name: "points"
+                widget: "list"
+                field: { label: "Nội dung", name: "point", widget: "string" }
+              - { label: "Ảnh banner tùy chọn", name: "image", widget: "image", required: false }
+              - { label: "Mô tả ảnh", name: "image_alt", widget: "string", required: false }
+              - { label: "Thẻ nổi 1 - tiêu đề", name: "float_one_title", widget: "string" }
+              - { label: "Thẻ nổi 1 - nội dung", name: "float_one_text", widget: "string" }
+              - { label: "Thẻ nổi 2 - tiêu đề", name: "float_two_title", widget: "string" }
+              - { label: "Thẻ nổi 2 - nội dung", name: "float_two_text", widget: "string" }
+          - { label: "Nhãn khu vực điểm nhanh", name: "stats_aria", widget: "string" }
+          - label: "Các điểm nhanh"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả ngắn", name: "description", widget: "string" }
+              - label: "Biểu tượng"
+                name: "icon"
+                widget: "select"
+                options: ["check", "shield", "clock", "receipt", "tool"]
+                default: "check"
+          - label: "Tiêu đề khu vực sản phẩm"
+            name: "products_heading"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - { label: "Nhãn liên kết", name: "link_label", widget: "string" }
+              - { label: "Ghi chú giá", name: "note", widget: "string" }
+          - label: "Tiêu đề khu vực dịch vụ"
+            name: "services_heading"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+          - label: "Đặt lịch tư vấn"
+            name: "booking"
+            widget: "object"
+            fields:
+              - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+              - { label: "Tiêu đề", name: "title", widget: "string" }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - label: "Lý do nên để lại yêu cầu"
+                name: "benefits"
+                widget: "list"
+                field: { label: "Lý do", name: "benefit", widget: "string" }
+              - { label: "Tiêu đề form", name: "form_title", widget: "string" }
+              - { label: "Mô tả form", name: "form_description", widget: "string" }
+              - { label: "Nhãn chọn nhu cầu", name: "need_label", widget: "string" }
+              - { label: "Gợi ý chọn nhu cầu", name: "need_placeholder", widget: "string" }
+              - label: "Các lựa chọn nhu cầu"
+                name: "needs"
+                widget: "list"
+                field: { label: "Lựa chọn", name: "need", widget: "string" }
+              - { label: "Nhãn họ tên", name: "name_label", widget: "string" }
+              - { label: "Gợi ý họ tên", name: "name_placeholder", widget: "string" }
+              - { label: "Nhãn số điện thoại", name: "phone_label", widget: "string" }
+              - { label: "Gợi ý số điện thoại", name: "phone_placeholder", widget: "string" }
+              - { label: "Nhãn mẫu máy", name: "model_label", widget: "string" }
+              - { label: "Gợi ý mẫu máy", name: "model_placeholder", widget: "string" }
+              - { label: "Nhãn ghi chú", name: "note_label", widget: "string" }
+              - { label: "Gợi ý ghi chú", name: "note_placeholder", widget: "string" }
+              - { label: "Nút gửi", name: "submit_label", widget: "string" }
+              - { label: "Ghi chú riêng tư", name: "privacy_note", widget: "string" }
+          - { label: "Ghi chú chân trang", name: "footer_note", widget: "string" }
+          - { label: "Liên kết lên đầu trang", name: "back_to_top", widget: "string" }
+
+  - name: "products"
+    label: "Sản phẩm điện thoại"
+    format: "frontmatter"
+    files:
+      - name: "product_list"
+        label: "Danh sách sản phẩm"
+        file: "content/products.md"
+        fields:
+          - { label: "Ghi chú danh sách", name: "editor_note", widget: "string", required: false }
+          - label: "Sản phẩm"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.price}}đ"
+            fields:
+              - { label: "Tên máy", name: "title", widget: "string" }
+              - { label: "Hãng", name: "brand", widget: "string" }
+              - { label: "Tình trạng", name: "condition", widget: "string" }
+              - { label: "Dung lượng", name: "storage", widget: "string", required: false }
+              - { label: "Mô tả", name: "description", widget: "text" }
+              - { label: "Giá bán (đ)", name: "price", widget: "number", value_type: "int", min: 0 }
+              - { label: "Giá cũ (đ)", name: "old_price", widget: "number", value_type: "int", min: 0, required: false }
+              - { label: "Quà tặng", name: "gift", widget: "string", required: false }
+              - { label: "Ảnh sản phẩm", name: "image", widget: "image", required: false }
+              - { label: "Mô tả ảnh", name: "image_alt", widget: "string", required: false }
+              - { label: "Nút hỏi giá", name: "button_label", widget: "string", default: "Hỏi tình trạng & giá" }
+
+  - name: "services"
+    label: "Dịch vụ sửa chữa"
+    format: "frontmatter"
+    files:
+      - name: "service_list"
+        label: "Danh sách dịch vụ & giá"
+        file: "content/services.md"
+        fields:
+          - label: "Dịch vụ phần cứng"
+            name: "hardware"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề nhóm", name: "title", widget: "string" }
+              - { label: "Mô tả nhóm", name: "description", widget: "string" }
+              - { label: "Biểu tượng", name: "icon", widget: "select", options: ["tool", "shield", "check", "receipt"] }
+              - label: "Các dịch vụ và giá khởi điểm"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.price_from}}đ"
+                fields:
+                  - { label: "Tên dịch vụ", name: "name", widget: "string" }
+                  - { label: "Mô tả ngắn", name: "description", widget: "string", required: false }
+                  - { label: "Giá từ (đ)", name: "price_from", widget: "number", value_type: "int", min: 0, required: false }
+              - { label: "Ghi chú về giá", name: "price_note", widget: "string" }
+              - { label: "Nhãn quy trình", name: "note_label", widget: "string" }
+              - { label: "Nội dung quy trình", name: "note", widget: "text" }
+          - label: "Dịch vụ phần mềm & kỹ thuật"
+            name: "software"
+            widget: "object"
+            fields:
+              - { label: "Tiêu đề nhóm", name: "title", widget: "string" }
+              - { label: "Mô tả nhóm", name: "description", widget: "string" }
+              - { label: "Biểu tượng", name: "icon", widget: "select", options: ["tool", "shield", "check", "receipt"] }
+              - label: "Các dịch vụ và giá khởi điểm"
+                name: "items"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.price_from}}đ"
+                fields:
+                  - { label: "Tên dịch vụ", name: "name", widget: "string" }
+                  - { label: "Mô tả ngắn", name: "description", widget: "string", required: false }
+                  - { label: "Giá từ (đ)", name: "price_from", widget: "number", value_type: "int", min: 0, required: false }
+              - { label: "Ghi chú về giá", name: "price_note", widget: "string" }
+              - { label: "Nhãn lưu ý", name: "note_label", widget: "string" }
+              - { label: "Nội dung lưu ý", name: "note", widget: "text" }
+
+  - name: "trust"
+    label: "Cam kết cửa hàng"
+    format: "frontmatter"
+    files:
+      - name: "trust_page"
+        label: "Nội dung cam kết"
+        file: "content/trust.md"
+        fields:
+          - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Mô tả", name: "description", widget: "text" }
+          - label: "Các cam kết"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Tiêu đề cam kết", name: "title", widget: "string" }
+              - { label: "Nội dung", name: "description", widget: "text" }
+              - label: "Biểu tượng"
+                name: "icon"
+                widget: "select"
+                options: ["shield", "clock", "receipt", "tool", "check"]
+
+  - name: "feedback"
+    label: "Feedback & hình ảnh"
+    format: "frontmatter"
+    files:
+      - name: "feedback_page"
+        label: "Đánh giá khách hàng"
+        file: "content/feedback.md"
+        fields:
+          - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Mô tả", name: "description", widget: "text" }
+          - { label: "Thông báo khi chưa có đánh giá", name: "empty_message", widget: "string" }
+          - label: "Đánh giá khách hàng"
+            name: "testimonials"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Tên khách hàng", name: "name", widget: "string" }
+              - { label: "Nhận xét", name: "quote", widget: "text" }
+              - { label: "Mua máy / dịch vụ", name: "context", widget: "string", required: false }
+              - { label: "Số sao", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+              - { label: "Ảnh đại diện", name: "image", widget: "image", required: false }
+          - { label: "Thông báo khi chưa có ảnh", name: "gallery_empty_message", widget: "string" }
+          - label: "Ảnh khách hàng / cửa hàng / kỹ thuật viên"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Ảnh", name: "image", widget: "image" }
+              - { label: "Mô tả ảnh", name: "alt", widget: "string" }
+              - { label: "Chú thích", name: "caption", widget: "string" }
+
+  - name: "contact"
+    label: "Liên hệ & giờ mở cửa"
+    format: "frontmatter"
+    files:
+      - name: "contact_page"
+        label: "Thông tin cửa hàng"
+        file: "content/contact.md"
+        fields:
+          - { label: "Nhãn nhỏ", name: "eyebrow", widget: "string" }
+          - { label: "Tiêu đề", name: "title", widget: "string" }
+          - { label: "Mô tả", name: "description", widget: "text" }
+          - { label: "Nhãn địa chỉ", name: "address_label", widget: "string" }
+          - { label: "Địa chỉ", name: "address", widget: "string" }
+          - { label: "Nhãn hotline", name: "hotline_label", widget: "string" }
+          - { label: "Nhãn điện thoại", name: "phone_label", widget: "string" }
+          - { label: "Số điện thoại", name: "phone", widget: "string" }
+          - { label: "Giờ mở cửa", name: "opening_hours", widget: "string" }
+          - { label: "Nhãn giờ mở cửa", name: "hours_label", widget: "string" }
+          - { label: "Tiêu đề bản đồ", name: "map_title", widget: "string" }
+          - { label: "Thông báo bản đồ trống", name: "map_empty_message", widget: "string", required: false }
+          - { label: "Link Google Maps", name: "map_url", widget: "string", required: false }
+          - { label: "Link Zalo", name: "zalo_url", widget: "string", required: false }
+          - { label: "Link Messenger", name: "messenger_url", widget: "string", required: false }
+          - { label: "Nhãn nhóm liên hệ nhanh", name: "quick_contact_aria", widget: "string" }
+          - { label: "Nhãn hiển thị cạnh nút nhanh", name: "quick_contact_label", widget: "string" }
+          - { label: "Tên nút gọi", name: "call_label", widget: "string" }
+          - { label: "Tên nút Zalo", name: "zalo_label", widget: "string" }
+          - { label: "Tên nút Messenger", name: "messenger_label", widget: "string" }
