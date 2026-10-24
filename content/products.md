@@ -9,7 +9,7 @@ products:
     old_price: 12490000
     title: iPhone 17 Pro Max
     condition: Đẹp 99% · còn bảo hành dài
-    image: /images/ao-thun-nu-tay-ngan-mau-kem-in-hinh-asm18-18.webp
+    image: /images/858566995_1845993843515774_777900062577600643_n.jfif
     storage: 256GB
     description: Ngoại hình đẹp, kiểm tra chức năng kỹ. Màu và dung lượng tùy tình
       trạng hàng.
@@ -21,7 +21,7 @@ products:
     old_price: 14990000
     title: Iphone 15plus
     condition: Máy đẹp · chọn kỹ
-    image: https://www.facebook.com/photo/?fbid=3562587447244014&set=a.126283804207746&__cft__[0]=AZiWcmMeGFfm9fJJT3IPXpXI8omvDf2E3Jca4DFylWAVjOm7RPhR5JfdGdcVcatsYySLlN6hfUC0bNaPlstFJzom5lD5c6gTSQcIJz8YGDvYxUmpbzIEEkU_vsyc3feqw4sex9hZApke5v6OEzxegclcnFblPdbqPg9rGNrbk3wHbSGCVLD5l6jTQUM&__tn__=EH-R
+    image: /images/15plus-1-.jfif
     storage: 256GB
     description: Màn hình lớn, camera đa dụng. Có nhiều mức dung lượng theo hàng sẵn có.
   - image_alt: Điện thoại theo nhu cầu
