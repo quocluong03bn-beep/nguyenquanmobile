@@ -14,7 +14,7 @@ map_title: Bản đồ đến Nguyễn Quân Mobile
 map_empty_message: Cập nhật địa chỉ cửa hàng trong Admin để hiện bản đồ.
 map_url: https://maps.google.com/?q=Nguyen+Quan+Mobile
 zalo_url: https://zalo.me/0909123456
-messenger_url: https://m.me/yourpage
+messenger_url: https://business.facebook.com/latest/inbox/all/?nav_ref=manage_page_ap_plus_inbox_message_button&asset_id=588232711521489
 quick_contact_aria: Liên hệ nhanh
 quick_contact_label: Liên hệ ngay
 call_label: Gọi ngay Hotline
