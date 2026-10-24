@@ -25,17 +25,25 @@ products:
     storage: 256GB
     description: Màn hình lớn, camera đa dụng. Có nhiều mức dung lượng theo hàng sẵn có.
   - image_alt: Điện thoại theo nhu cầu
-    brand: Đa thương hiệu · máy mới
+    brand: SAMSUNG - đã qua sử dụng
     button_label: Nhờ tư vấn chọn máy
-    price: 0
+    price: 10500000
     gift: Ưu đãi và quà tặng tùy mẫu máy
     old_price: 0
-    title: Điện thoại theo nhu cầu
+    title: Samsung s22ultra
     condition: Tư vấn theo ngân sách
-    image: ""
+    image: /images/ss22ultra.jfif
     storage: Nhiều lựa chọn
     description: Tư vấn mẫu máy, ngân sách và cấu hình phù hợp. Hỗ trợ kiểm tra hàng
       trước khi chốt.
+  - button_label: Hỏi tình trạng & giá
+    title: OPPO A2X
+    brand: OPPO
+    condition: đã qua sử dựng
+    storage: RAM 6/128gb
+    price: 1500000
+    image: /images/opp.jfif
+    description: máy zin chưa sửa chữa
 ---
 
 Danh sách máy đang bán. Thêm/xóa sản phẩm trong danh sách trên bằng trang Admin.
