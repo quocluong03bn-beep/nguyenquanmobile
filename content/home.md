@@ -1,93 +1,98 @@
 ---
-store_name: "Nguyễn Quân Mobile"
-page_title: "Mua máy an tâm, sửa chữa tận tâm"
-page_description: "Điện thoại chọn kỹ, sửa chữa minh bạch, tư vấn tận tâm tại Nguyễn Quân Mobile."
-brand_subtitle: "PHONE · CARE · REPAIR"
-logo_mark: "NQ"
-top_notice: "Mua máy an tâm · Sửa chữa minh bạch · Tư vấn tận tâm"
-nav_aria: "Điều hướng chính"
+store_name: Ngọc Thọ Apple
+page_title: Mua máy an tâm, sửa chữa tận tâm
+page_description: Điện thoại chọn kỹ, sửa chữa minh bạch, tư vấn tận tâm tại Nguyễn Quân Mobile.
+brand_subtitle: PHONE · CARE · REPAIR
+logo_mark: NQ
+top_notice: Mua máy an tâm · Sửa chữa minh bạch · Tư vấn tận tâm
+nav_aria: Điều hướng chính
 navigation:
-  - label: "Điện thoại"
+  - label: Điện thoại
     url: "#dien-thoai"
-  - label: "Sửa chữa"
+  - label: Sửa chữa
     url: "#sua-chua"
-  - label: "Cam kết"
+  - label: Cam kết
     url: "#cam-ket"
-  - label: "Feedback"
+  - label: Feedback
     url: "#feedback"
-  - label: "Liên hệ"
+  - label: Liên hệ
     url: "#lien-he"
-header_cta_label: "Đặt lịch tư vấn"
+header_cta_label: Đặt lịch tư vấn
 header_cta_url: "#dat-lich"
 hero:
-  eyebrow: "Điện thoại & trung tâm kỹ thuật"
-  heading: "Mua máy đúng chất."
-  highlight: "Sửa chữa đúng tâm."
-  description: "Điện thoại được kiểm tra kỹ trước khi đến tay bạn. Thiết bị gặp sự cố được tư vấn rõ ràng, báo giá trước và sửa bởi kỹ thuật viên tận tâm."
-  primary_label: "Khám phá điện thoại"
-  primary_url: "#dien-thoai"
-  secondary_label: "Xem dịch vụ sửa chữa"
-  secondary_url: "#sua-chua"
+  float_two_title: Kỹ thuật tận tâm
+  heading: Mua máy đúng chất.
   points:
-    - "Báo giá rõ trước khi làm"
-    - "Bảo hành minh bạch"
+    - Báo giá rõ trước khi làm
+    - Bảo hành minh bạch
+  float_two_text: Tư vấn đúng lỗi, đúng giá
+  secondary_url: "#sua-chua"
+  image_alt: Robot kỹ thuật đang sửa điện thoại
+  secondary_label: Xem dịch vụ sửa chữa
+  float_one_text: Kiểm tra trước khi giao
+  eyebrow: Điện thoại & trung tâm kỹ thuật
+  primary_url: "#dien-thoai"
+  highlight: Sửa chữa đúng tâm.
+  primary_label: Khám phá điện thoại
   image: ""
-  image_alt: "Robot kỹ thuật đang sửa điện thoại"
-  float_one_title: "Máy chọn kỹ"
-  float_one_text: "Kiểm tra trước khi giao"
-  float_two_title: "Kỹ thuật tận tâm"
-  float_two_text: "Tư vấn đúng lỗi, đúng giá"
-stats_aria: "Điểm nổi bật của cửa hàng"
+  float_one_title: Máy chọn kỹ
+  description: Điện thoại được kiểm tra kỹ trước khi đến tay bạn. Thiết bị gặp sự
+    cố được tư vấn rõ ràng, báo giá trước và sửa bởi kỹ thuật viên tận tâm.
+stats_aria: Điểm nổi bật của cửa hàng
 stats:
-  - title: "Kiểm tra kỹ"
-    description: "Trước khi giao máy"
-    icon: "check"
-  - title: "Bảo hành rõ ràng"
-    description: "Thông tin minh bạch"
-    icon: "shield"
-  - title: "Hỗ trợ tận tâm"
-    description: "Trước và sau mua"
-    icon: "clock"
-  - title: "Báo giá trước"
-    description: "Đồng ý mới tiến hành"
-    icon: "receipt"
+  - title: Kiểm tra kỹ
+    description: Trước khi giao máy
+    icon: check
+  - title: Bảo hành rõ ràng
+    description: Thông tin minh bạch
+    icon: shield
+  - title: Hỗ trợ tận tâm
+    description: Trước và sau mua
+    icon: clock
+  - title: Báo giá trước
+    description: Đồng ý mới tiến hành
+    icon: receipt
 products_heading:
-  eyebrow: "Điện thoại nổi bật"
-  title: "Chọn chiếc máy hợp với bạn"
-  description: "Máy được kiểm tra ngoại hình và chức năng. Gọi cửa hàng để xác nhận màu, dung lượng, tình trạng và giá tại thời điểm mua."
-  link_label: "Nhờ tư vấn chọn máy"
-  note: "Giá và quà tặng có thể thay đổi theo tình trạng hàng; vui lòng xác nhận với cửa hàng trước khi mua."
+  eyebrow: Điện thoại nổi bật
+  title: Chọn chiếc máy hợp với bạn
+  description: Máy được kiểm tra ngoại hình và chức năng. Gọi cửa hàng để xác nhận
+    màu, dung lượng, tình trạng và giá tại thời điểm mua.
+  link_label: Nhờ tư vấn chọn máy
+  note: Giá và quà tặng có thể thay đổi theo tình trạng hàng; vui lòng xác nhận
+    với cửa hàng trước khi mua.
 services_heading:
-  eyebrow: "Trung tâm sửa chữa"
-  title: "Bắt đúng bệnh. Báo đúng giá."
-  description: "Từ lỗi phần cứng đến sự cố phần mềm, kỹ thuật viên kiểm tra và trao đổi phương án với bạn trước khi thực hiện."
+  eyebrow: Trung tâm sửa chữa
+  title: Bắt đúng bệnh. Báo đúng giá.
+  description: Từ lỗi phần cứng đến sự cố phần mềm, kỹ thuật viên kiểm tra và trao
+    đổi phương án với bạn trước khi thực hiện.
 booking:
-  eyebrow: "Đặt lịch & tư vấn"
-  title: "Bạn cần mua máy hay cần hỗ trợ kỹ thuật?"
-  description: "Để lại thông tin, cửa hàng sẽ liên hệ tư vấn phiên bản phù hợp hoặc hẹn thời gian kiểm tra thiết bị."
+  name_label: Họ và tên *
+  form_description: Điền thông tin bên dưới để được tư vấn. Các trường có dấu * là bắt buộc.
+  phone_placeholder: 09xx xxx xxx
+  phone_label: Số điện thoại *
+  note_placeholder: Mô tả ngắn nhu cầu của bạn...
+  note_label: Nội dung cần tư vấn
+  privacy_note: Thông tin chỉ dùng để liên hệ tư vấn theo yêu cầu của bạn.
+  eyebrow: Đặt lịch & tư vấn
+  need_placeholder: Chọn nhu cầu
+  need_label: Bạn đang cần gì? *
+  submit_label: Gửi yêu cầu đặt lịch
+  title: Bạn cần mua máy hay cần hỗ trợ kỹ thuật?
   benefits:
-    - "Không mất phí hỏi thông tin ban đầu"
-    - "Chủ động chọn nhu cầu cần hỗ trợ"
-    - "Trao đổi rõ trước khi mua hoặc sửa"
-  form_title: "Gửi yêu cầu cho cửa hàng"
-  form_description: "Điền thông tin bên dưới để được tư vấn. Các trường có dấu * là bắt buộc."
-  need_label: "Bạn đang cần gì? *"
-  need_placeholder: "Chọn nhu cầu"
-  needs:
-    - "Mua điện thoại"
-    - "Cần tư vấn / sửa chữa máy"
-  name_label: "Họ và tên *"
-  name_placeholder: "Nguyễn Văn A"
-  phone_label: "Số điện thoại *"
-  phone_placeholder: "09xx xxx xxx"
-  model_label: "Mẫu máy (nếu có)"
+    - Không mất phí hỏi thông tin ban đầu
+    - Chủ động chọn nhu cầu cần hỗ trợ
+    - Trao đổi rõ trước khi mua hoặc sửa
+  description: Để lại thông tin, cửa hàng sẽ liên hệ tư vấn phiên bản phù hợp hoặc
+    hẹn thời gian kiểm tra thiết bị.
   model_placeholder: "Ví dụ: iPhone 13 Pro Max"
-  note_label: "Nội dung cần tư vấn"
-  note_placeholder: "Mô tả ngắn nhu cầu của bạn..."
-  submit_label: "Gửi yêu cầu đặt lịch"
-  privacy_note: "Thông tin chỉ dùng để liên hệ tư vấn theo yêu cầu của bạn."
-footer_note: "Nội dung cửa hàng được cập nhật qua trang quản trị."
-back_to_top: "Lên đầu trang"
+  needs:
+    - Mua điện thoại
+    - Cần tư vấn / sửa chữa máy
+  form_title: Gửi yêu cầu cho cửa hàng
+  model_label: Mẫu máy (nếu có)
+  name_placeholder: Nguyễn Văn A
+footer_note: Nội dung cửa hàng được cập nhật qua trang quản trị.
+back_to_top: Lên đầu trang
 ---
 
 Nội dung trang chủ được quản lý bằng Decap CMS.
